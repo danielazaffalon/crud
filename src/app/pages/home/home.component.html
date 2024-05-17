@@ -1,0 +1,15 @@
+<app-header [title]="title"></app-header>
+<p>home works!</p>
+<a [routerLink]="['/aboutus']">About Us</a>
+<h2>Locations</h2>
+
+<div>
+    <ul>
+        <li *ngFor="let location of locations" (click)="onSelect(location)">
+        <span>{{location.name}}</span>
+        <button type="button" (click)=deleteLocation(location)>X</button>
+        </li>
+    </ul>
+</div>
+
+<app-form [location]="selectedLocation"></app-form>

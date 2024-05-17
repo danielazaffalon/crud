@@ -1,0 +1,14 @@
+<h2>Update Location</h2>
+<form [formGroup]="locationForm">
+    <div>
+        id: <input type="text" formControlName="id"><br>
+        name: <input type="text" formControlName="name"><br>
+        lat: <input type="number" formControlName="lat"><br>
+        lon: <input type="number" formControlName="lon"><br>
+        type: <input type="text" formControlName="type"><br>
+        description: <input type="text" formControlName="description"><br>
+        enable: <input type="checkbox" formControlName="enable"><br>
+        <button type="button" (click)=saveLocation() [disabled]="!this.locationForm.valid">Save</button>
+        <button type="button" (click)=deleteLocation()>Delete</button>
+    </div>
+</form>
